@@ -56,7 +56,7 @@ function getResults(body) {
 app.get("/search/:location/:search_term", (req, res) => {
   const { location, search_term } = req.params;
 
-  const url = `https://${location}.craigslist.org/search/sss?sort=date&query=${search_term}`;
+  const url = `https://${location}.craigslist.org/search/sss?sort=rel&query=${search_term}`;
   axios
     .get(url)
     .then(({ data }) => data)
